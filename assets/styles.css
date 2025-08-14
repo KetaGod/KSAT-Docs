@@ -179,3 +179,33 @@ pre.code{
 .footer{margin-top:40px;padding:20px 0;border-top:1px solid var(--border);background:#18120e}
 
 :focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+.release-body {
+  margin-top: 8px;
+  color: var(--text);
+  opacity: .95;
+}
+.release-body h1, .release-body h2, .release-body h3 {
+  margin: 12px 0 6px;
+}
+.release-body p, .release-body ul, .release-body ol {
+  margin: 8px 0;
+}
+.release-body ul, .release-body ol {
+  padding-left: 20px;
+}
+.release-body code {
+  background: #211a14;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+.release-body pre {
+  background: #211a14;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  overflow: auto;
+}
+.release-body a { color: #cde1ff; text-decoration: none; }
+.release-body a:hover { text-decoration: underline; }
