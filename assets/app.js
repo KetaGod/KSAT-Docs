@@ -45,7 +45,7 @@ async function loadLatest(){
 }
 
 async function loadReleases(limit=12){
-  const box = $("#releaseList");
+  const box = document.querySelector("#releaseList");
   if (!box) return;
   try{
     const r = await fetch(RELEASES_API, { headers: { "Accept": "application/vnd.github+json" }});
@@ -56,11 +56,22 @@ async function loadReleases(limit=12){
       const el = document.createElement("div");
       el.className = "rel";
       const body = (rel.body || "").trim();
-      const short = body.split("\n").slice(0,6).join("\n");
+
+      let bodyHtml = "";
+      if (window.marked && window.DOMPurify) {
+        const rawHtml = marked.parse(body, { gfm: true, breaks: true });
+        bodyHtml = DOMPurify.sanitize(rawHtml, { USE_PROFILES: { html: true } });
+      } else {
+        const short = body.split("\n").slice(0,6).join("\n");
+        bodyHtml = `<pre class="code small">${escapeHtml(short)}${body.split("\n").length>6 ? "\n…" : ""}</pre>`;
+      }
+
       el.innerHTML = `
         <div><b>${rel.name || rel.tag_name}</b> — ${fmtDate(rel.published_at)}</div>
-        <pre class="code small">${escapeHtml(short)}${body.split("\n").length>6 ? "\n…" : ""}</pre>
-        <div style="margin-top:6px"><a href="${rel.html_url}" target="_blank" rel="noopener">View on GitHub</a></div>
+        <div class="release-body">${bodyHtml}</div>
+        <div style="margin-top:6px">
+          <a href="${rel.html_url}" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
       `;
       box.appendChild(el);
     }
