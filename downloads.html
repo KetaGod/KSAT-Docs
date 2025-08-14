@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="neon">
+<head>
+  <meta charset="utf-8" />
+  <title>Download KSAT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTE5YTNiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNWFhODZhIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZD0iTTUwIDhjLTkgMS0xOCA2LTIzIDEyLTYgNi05IDEzLTkgMjAgMCA3IDQgMTIgMTAgMTIgNiAwIDEyLTUgMTYtMTAgNC01IDktMTMgMTAtMjIgMC02LTItMTEtNC0xMnoiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNMTEgNDZjNi0xIDEzLTcgMTgtMTIiIHN0cm9rZT0iIzhkNWEyYiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row between center">
+      <a class="brand" href="index.html">KSAT</a>
+      <nav class="nav">
+        <a class="active" href="downloads.html">Download</a>
+        <a href="docs.html">Docs</a>
+        <a href="releases.html">Release Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Download</h1>
+    <p class="muted">Grab the latest Windows build straight from GitHub Releases.</p>
+
+    <div class="card leaf">
+      <h3 id="latestTitle">Latest Release</h3>
+      <p id="latestMeta" class="small muted">Loading…</p>
+      <div class="row">
+        <a id="latestBtn" class="btn primary" href="#" target="_blank" rel="noopener">Download (.exe)</a>
+        <a id="releasesBtn" class="btn" href="#" target="_blank" rel="noopener">All releases</a>
+      </div>
+      <details style="margin-top:12px">
+        <summary>Validation & Safety</summary>
+        <p class="small">Download only from this site or our official GitHub releases. Verify the SHA-256 via PowerShell:</p>
+        <pre class="code small">Get-FileHash .\KSAT-Setup.exe -Algorithm SHA256</pre>
+      </details>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container row between center tiny muted">
+      <div>© 2025 Ketamine Junkies Inc. — KSAT</div>
+      <div class="row gap">
+        <a id="repoLink" href="#" target="_blank">GitHub</a>
+        <a id="issuesLink" href="#" target="_blank">Issues</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

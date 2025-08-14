@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-theme="neon">
+<head>
+  <meta charset="utf-8" />
+  <title>KSAT Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZTE5YTNiIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNWFhODZhIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHBhdGggZD0iTTUwIDhjLTkgMS0xOCA2LTIzIDEyLTYgNi05IDEzLTkgMjAgMCA3IDQgMTIgMTAgMTIgNiAwIDEyLTUgMTYtMTAgNC01IDktMTMgMTAtMjIgMC02LTItMTEtNC0xMnoiIGZpbGw9InVybCgjZykiLz48cGF0aCBkPSJNMTEgNDZjNi0xIDEzLTcgMTgtMTIiIHN0cm9rZT0iIzhkNWEyYiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container row between center">
+      <a class="brand" href="index.html">KSAT</a>
+      <nav class="nav">
+        <a href="downloads.html">Download</a>
+        <a class="active" href="docs.html">Docs</a>
+        <a href="releases.html">Release Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Documentation</h1>
+
+    <h2>Getting Started</h2>
+    <ol class="leaves">
+      <li>Install KSAT from the <a href="downloads.html">Downloads</a> page.</li>
+      <li>Open <b>Settings</b> → click <i>Get a key</i> to obtain your Steam Web API key. Paste it and press <b>Save</b>.</li>
+      <li>Click <b>Connect</b>, sign in with Steam, and your library will appear.</li>
+    </ol>
+
+    <h2>Core Features</h2>
+    <ul class="leaves">
+      <li><b>Notes & Tags:</b> per-game notes; tags like <code>cleanup</code>, <code>DLC1</code>.</li>
+      <li><b>Filters:</b> unlocked/locked/secret/manual-only + text search.</li>
+      <li><b>Sorting:</b> default, next easiest, rarest first.</li>
+      <li><b>Friend Compare:</b> paste SteamID64 or vanity; see differences.</li>
+      <li><b>Manual Overrides:</b> mark achievements manually when APIs lag.</li>
+      <li><b>Launch/Store:</b> launch a game or open its store page.</li>
+      <li><b>Share Card:</b> export a clean progress card as PNG.</li>
+      <li><b>Themes:</b> Neon, Midnight, Cozy, Solar + extra fun themes.</li>
+    </ul>
+
+    <h2>Troubleshooting</h2>
+    <details class="leaf">
+      <summary>Blank Steam sign-in window</summary>
+      <p>Install the Microsoft <b>WebView2 Runtime</b> and retry. Ensure your firewall allows KSAT.</p>
+    </details>
+    <details class="leaf">
+      <summary>Antivirus false positive</summary>
+      <p>Can happen with unsigned installers. Download only from GitHub Releases; verify the hash.</p>
+    </details>
+    <details class="leaf">
+      <summary>Dev: “Waiting for http://localhost:5173/...”</summary>
+      <p>Make sure Tauri starts Vite via <code>beforeDevCommand</code> or run Vite in another terminal.</p>
+    </details>
+  </main>
+
+  <footer class="footer">
+    <div class="container row between center tiny muted">
+      <div>© 2025 Ketamine Junkies Inc. — KSAT</div>
+      <div class="row gap">
+        <a id="repoLink" href="#" target="_blank">GitHub</a>
+        <a id="issuesLink" href="#" target="_blank">Issues</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
